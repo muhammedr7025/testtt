@@ -53,6 +53,12 @@
         database.ref("/").update({ uv: 4 });
         database.ref("/").update({ temp: 38 });
       }
+      function updateDatabase5(value) {
+        database.ref("/").update({ pulse: 54 });
+        database.ref("/").update({ spo: 96 });
+        database.ref("/").update({ uv: 4 });
+        database.ref("/").update({ temp: 36 });
+      }
     </script>
   </head>
   <body>
@@ -61,5 +67,6 @@
     <button onclick="updateDatabase2('Value 3')">Set Value 3</button><br />
     <button onclick="updateDatabase3('Value 4')">Set Value 4</button><br />
     <button onclick="updateDatabase4('Value 4')">Set Value 4</button><br />
+     <button onclick="updateDatabase5('Value 4')">Set Value 4</button><br />
   </body>
 </html>
