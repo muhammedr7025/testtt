@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Control Firebase Realtime Database</title>
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <!-- Add Firebase Realtime Database -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAjw1PJ5-d8EotRhsYoK1wSLO7EkJ0h1oQ",
+        authDomain: "freedom-tracker-1.firebaseapp.com",
+        databaseURL: "https://freedom-tracker-1-default-rtdb.firebaseio.com",
+        projectId: "freedom-tracker-1",
+        storageBucket: "freedom-tracker-1.appspot.com",
+        messagingSenderId: "433526929507",
+        appId: "1:433526929507:web:7d2702bec2f0a8f4272056",
+        measurementId: "G-LZP9BT1WK5",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      var database = firebase.database();
+
+      function updateDatabase(value) {
+        database.ref("/").update({ pulse: 94 });
+        database.ref("/").update({ spo: 96 });
+        database.ref("/").update({ uv: 5 });
+        database.ref("/").update({ temp: 37.2 });
+      }
+      function updateDatabase1(value) {
+        database.ref("/").update({ pulse: 84 });
+        database.ref("/").update({ spo: 96 });
+        database.ref("/").update({ uv: 4 });
+        database.ref("/").update({ temp: 36.1 });
+      }
+      function updateDatabase2(value) {
+        database.ref("/").update({ pulse: 89 });
+        database.ref("/").update({ spo: 97 });
+        database.ref("/").update({ uv: 5 });
+        database.ref("/").update({ temp: 39.4 });
+      }
+      function updateDatabase3(value) {
+        database.ref("/").update({ pulse: 80 });
+        database.ref("/").update({ spo: 97 });
+        database.ref("/").update({ uv: 3 });
+        database.ref("/").update({ temp: 36 });
+      }
+      function updateDatabase4(value) {
+        database.ref("/").update({ pulse: 84 });
+        database.ref("/").update({ spo: 96 });
+        database.ref("/").update({ uv: 4 });
+        database.ref("/").update({ temp: 38 });
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="updateDatabase('Value 1')">Set Value 1</button><br />
+    <button onclick="updateDatabase1('Value 2')">Set Value 2</button><br />
+    <button onclick="updateDatabase2('Value 3')">Set Value 3</button><br />
+    <button onclick="updateDatabase3('Value 4')">Set Value 4</button><br />
+    <button onclick="updateDatabase4('Value 4')">Set Value 4</button><br />
+  </body>
+</html>
